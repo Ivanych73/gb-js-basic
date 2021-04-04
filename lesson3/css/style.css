@@ -1,0 +1,193 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  width: 71%;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.header {
+  min-height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  margin: 0 0 40px 0;
+}
+
+.header__title {
+  text-transform: uppercase;
+  color: #D5E21B;
+  font-size: 28px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.homework {
+  min-height: 500px;
+  border: 4px solid #D5E21B;
+  border-radius: 20px;
+  margin: 0 0 30px 0;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.homework__task {
+  width: 80%;
+  border-bottom: 1px dotted #000000;
+  padding: 15px 0;
+}
+
+.homework__task-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 400;
+  display: block;
+  margin: 0 0 15px 0;
+  color: #1E1bE2;
+}
+
+.homework__task-text {
+  display: block;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.homework__task-example {
+  font-size: 19px;
+  line-height: 26px;
+  font-style: italic;
+  color: #2C2727;
+  display: block;
+  margin: 0 0 0 20px;
+}
+
+.homework__answer-button {
+  min-height: 40px;
+  min-width: 170px;
+  box-sizing: border-box;
+  border: 2px solid #EDB561;
+  border-radius: 10px;
+  background-color: transparent;
+  padding: 0 20px;
+  margin: 20px 0;
+  font-size: 20px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #EDB561;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 600ms;
+}
+
+.homework__answer-button:hover {
+  background-color: #EDB561;
+  color: #FFFFFF;
+  box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+  transform: scale(1.05);
+}
+
+.homework__answer-button:active {
+  transform: scale(0.95);
+  box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+  outline: 0;
+}
+
+.homework__answer {
+  background-color: #E1DEDB;
+  border: 1px solid #2C2727;
+  border-radius: 10px;
+  font-size: 24px;
+  line-height: 26px;
+  padding: 20px;
+}
+
+.flex-center-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.flex-sb-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  min-height: 100px;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+}
+
+.footer__wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #D5E21B;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 24px;
+}
+/*# sourceMappingURL=style.css.map */
