@@ -1,0 +1,94 @@
+.homework {
+    min-height: 500px;
+    border: 4px solid $barberry;
+    border-radius: 20px;
+    margin: 0 0 30px 0;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    &__task {
+        width: 80%;
+        border-bottom: 1px dotted $black;
+        padding: 15px 0;
+    }
+
+    &__task-title {
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 23px;
+        font-weight: 400;
+        display: block;
+        margin: 0 0 15px 0;
+        color: $pesianblue;
+    }
+
+    &__task-text {
+        display: block;
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+    &__task-example {
+        font-size: 19px;
+        line-height: 26px;
+        font-style: italic;
+        color: $mineshaft;
+        display: block;
+        margin: 0 0 0 20px;
+    }
+
+    &__answer-button {
+        min-height: 40px;
+        min-width: 170px;
+        box-sizing: border-box;
+        border: 2px solid $porshe;
+        border-radius: 10px;
+        background-color: transparent;
+        padding: 0 20px;
+        margin: 20px 0 0 0;
+        font-size: 20px;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: $porshe;
+        transition-property: color, background-color, box-shadow;
+        transition-duration: 600ms;
+    }
+
+    &__answer-button:hover {
+        background-color: $porshe;
+        color: $white;
+        box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+        transform: scale(1.05);
+    }
+
+    &__answer-button:active {
+        transform: scale(0.95);
+        box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+        outline: 0;
+    }
+
+    &__answer {
+        width: 100%;
+        background-color: $westar;
+        border: 1px solid $mineshaft;
+        border-radius: 10px;
+        font-size: 24px;
+        line-height: 26px;
+        padding: 20px;
+    }
+}
+
+.flex-center-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.flex-sb-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

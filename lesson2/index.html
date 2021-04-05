@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson2 homework</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">it's a homework for lesson 2 of javascript basic learing course by geekbrains</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="homework">
+                <h2 class="visually-hidden">Содержание домашней работы</h2>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 1</h3>
+                    <span class="homework__task-text">Дан код:</span>
+                    <span class="homework__task-example">var a = 1, b = 1, c, d;</span>
+                    <span class="homework__task-example">c = ++a; alert(c); // 2</span>
+                    <span class="homework__task-example">d = b++; alert(d); // 1</span>
+                    <span class="homework__task-example">c = (2+ ++a); alert(c); // 5</span>
+                    <span class="homework__task-example">d = (2+ b++); alert(d); // 4</span>
+                    <span class="homework__task-example">alert(a); // 3</span>
+                    <span class="homework__task-example">alert(b); // 3</span>
+                    <span class="homework__task-text">Почему код даёт именно такие результаты?</span>
+                    <div class="homework__answer">
+                        2 строка - оператор ++number сначала производит увеличение переменной, а уже потом вывод. <br>
+                        3 строка - оператор number++ наоборот сначала производит вывод значения переменной, а уже потом
+                        его изменение.<br>
+                        4 строка - также используется постфиксный инкремент, поэтому вычисляется его значение, а уже
+                        потом идет вывод.
+                        Переменной a изначально присваивалось значение 1, а потом эта переменная дважды
+                        инкрементировалась. Соответственно ее значение - 3. Ну, а 2+3=5.<br>
+                        5 строка - снова используется префиксный инкремент, сначала вывод, потом вычисление значения.
+                        Переменная b ранее также инкрементировалась дважды, ее значение после инкремента будет равно 3
+                        но на вывод идет предыдущее значение - 2<br>
+                        6 строка - см. клмментарий к 4 строке. Переменной a изначально присваивалось значение 1, а потом
+                        эта переменная дважды
+                        инкрементировалась. Соответственно ее значение - 3.<br>
+                        7 строка - см. комментарий к 5 строке. Переменной b изначально присваивалось значение 1, а потом
+                        эта переменная дважды
+                        инкрементировалась. Соответственно ее значение - 3.
+                    </div>
+                </div>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 2</h3>
+                    Чему будет равен x в примере ниже?
+                    <span class="homework__task-example">var a = 2;</span>
+                    <span class="homework__task-example">var x = 1 + (a *= 2);</span>
+                    <div class="homework__answer">
+                        Выражение a*=2 есть краткая форма записи выражения a = a * 2, то есть x = 1+2*2 = 5
+                    </div>
+                </div>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 3</h3>
+                    <span class="homework__task-text">Объявить две целочисленные переменные a и b и задать им
+                        произвольные начальные значения. Затем
+                        написать скрипт, который работает по следующему принципу:
+                        если a и b положительные, вывести их разность;
+                        если а и b отрицательные, вывести их произведение;
+                        если а и b разных знаков, вывести их сумму; ноль можно считать положительным числом.</span>
+                    <div class="flex-center-wrapper">
+                        <button class="homework__answer-button" type="button" onclick="runCalc()">разные операции в
+                            зависимости от знаков чисел</button>
+                    </div>
+                </div>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 5</h3>
+                    <span class="homework__task-text"> Реализовать основные 4 арифметические операции в виде функций
+                        с
+                        двумя параметрами. Обязательно
+                        использовать оператор return.</span>
+                    <div class="flex-sb-wrapper">
+                        <button class="homework__answer-button" type="button" onclick="runSum()">сложение</button>
+                        <button class="homework__answer-button" type="button"
+                            onclick="runSubtraction()">вычитание</button>
+                        <button class="homework__answer-button" type="button" onclick="runMult()">умножение</button>
+                        <button class="homework__answer-button" type="button" onclick="runDiv()">деление</button>
+                    </div>
+                </div>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 6</h3>
+                    <span class="homework__task-text"> Реализовать функцию с тремя параметрами: function
+                        mathOperation(arg1, arg2, operation), где arg1,
+                        arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+                        переданного
+                        значения операции выполнить одну из арифметических операций (использовать функции из пункта
+                        3) и
+                        вернуть полученное значение (использовать switch).</span>
+                    <div class="flex-center-wrapper">
+                        <button class="homework__answer-button" type="button" onclick="runMathOp()">арифметическая
+                            операция
+                            на
+                            выбор пользователя</button>
+                    </div>
+                </div>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 7</h3>
+                    <span class="homework__task-text">Сравнить null и 0. Попробуйте объяснить результат.</span>
+                    <div class="homework__answer">
+                        Результат - false. Null - это отдельный тип данных и отдельное значение, которое может быть
+                        равно только undefined.
+                    </div>
+                </div>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 8</h3>
+                    <span class="homework__task-text"> С помощью рекурсии организовать функцию возведения числа в
+                        степень. Формат: function power(val,
+                        pow), где val – заданное число, pow – степень.</span>
+                    <div class="flex-center-wrapper">
+                        <button type="button" class="homework__answer-button" onclick="runExp()">рекурсивное возведение
+                            в
+                            степень</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__wrapper container">
+            <h2 class="visually-hidden">copyright</h2>
+            <p>&copy; 2021 by ivanych73 all rights reserved</p>
+            <p>content provided by geekbrains &reg;</p>
+        </div>
+    </footer>
+    <script src="js/math.js"></script>
+</body>
+
+</html>
