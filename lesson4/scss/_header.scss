@@ -1,0 +1,16 @@
+.header {
+    min-height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $black;
+    margin: 0 0 40px 0;
+
+    &__title {
+        text-transform: uppercase;
+        color: $barberry;
+        font-size: 28px;
+        line-height: 30px;
+        font-weight: 700;
+    }
+}
