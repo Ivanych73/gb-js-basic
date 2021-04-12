@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson3 homework</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">it's a homework for lesson 3 of javascript basic learing course by geekbrains</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="homework">
+                <h2 class="visually-hidden">Содержание домашней работы</h2>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 1</h3>
+                    <span class="homework__task-text">С помощью цикла while вывести все простые числа в промежутке от 0
+                        до 100</span>
+                    <button type="button" class="homework__answer-button" onclick="runCountPrimeNumbers()">получить
+                        простые числа</button>
+                    <div class="homework__answer" id="task1-answer">
+
+                    </div>
+                </div>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 2 - 3</h3>
+                    <span class="homework__task-text">С этого урока начинаем работать с функционалом интернет-магазина.
+                        Предположим, есть сущность корзины. Нужно реализовать функционал подсчета стоимости корзины в
+                        зависимости от находящихся в ней товаров.</span>
+                    <div class="homework__task-text">
+                        Товары в корзине хранятся в массиве. Задачи:
+                    </div>
+                    <div class="homework__task-text">
+                        a) Организовать такой массив для хранения товаров в корзине;
+                    </div>
+                    <div class="homework__task-text">
+                        b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
+                    </div>
+                    <div class="homework__answer">
+                        Для корзины будем использовать массив basket, состоящий из массивов item. Структура массива
+                        item:
+                        <ul>
+                            <li>ID товара</li>
+                            <li>Наименование товара</li>
+                            <li>Цвет товара</li>
+                            <li>Размер товара</li>
+                            <li>Количество единиц товара</li>
+                            <li>Цена товара</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="homework__answer-button" onclick="runCountBasketPrice()">получить
+                        стоимость товаров</button>
+                    <div class="homework__answer" id="task2-3-answer">
+
+                    </div>
+                </div>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 4</h3>
+                    <span class="homework__task-text">*Вывести с помощью цикла for числа от 0 до 9, не используя тело
+                        цикла. Выглядеть это должно так:</span>
+                    <span class="homework__task-example">
+                        for(…){// здесь пусто}
+                    </span>
+                    <button type="button" class="homework__answer-button" onclick="runLoopWithoutBody()">получить
+                        числа от 0 до 9</button>
+                    <div class="homework__answer" id="task4-answer">
+
+                    </div>
+                </div>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 5</h3>
+                    <span class="homework__task-text">*Нарисовать пирамиду с помощью console.log, как показано на
+                        рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:</span>
+                    <div class="homework__task-example">x</div>
+                    <div class="homework__task-example">xx</div>
+                    <div class="homework__task-example">xxx</div>
+                    <div class="homework__task-example">xxxx</div>
+                    <div class="homework__task-example">xxxxx</div>
+                    <button type="button" class="homework__answer-button" onclick="runDrawPyramide()">вывести
+                        пирамиду в консоль</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__wrapper container">
+            <h2 class="visually-hidden">copyright</h2>
+            <p>&copy; 2021 by ivanych73 all rights reserved</p>
+            <p>content provided by geekbrains &reg;</p>
+        </div>
+    </footer>
+    <script src="js/lesson3.js"></script>
+</body>
+
+</html>
