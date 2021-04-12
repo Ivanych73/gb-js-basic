@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson4 homework</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">it's a homework for lesson 4 of javascript basic learing course by geekbrains</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="homework">
+                <h2 class="visually-hidden">Содержание домашней работы</h2>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 1</h3>
+                    <form>
+                        <span class="homework__task-text">Написать функцию, преобразующую число в объект. Передавая на
+                            вход число от 0 до 999, мы должны получить на выходе объект, в котором в соответствующих
+                            свойствах описаны единицы, десятки и сотни. Например, для числа 245 мы должны получить
+                            следующий объект: {‘единицы’: 5, ‘десятки’: 4, ‘сотни’: 2}. Если число превышает 999,
+                            необходимо выдать соответствующее сообщение с помощью console.log и вернуть пустой
+                            объект.</span>
+                        <input type="number" class="homework__input" id="task1-input" placeholder="0 - 999">
+                        <button type="button" class="homework__answer-button" onclick="runGetObjOfNumbers()">получить
+                            объект</button>
+                    </form>
+                </div>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 2</h3>
+                    <span class="homework__task-text">Для игры, реализованной на уроке, добавить возможность вывода хода
+                        номер n (номер задается пользователем)</span>
+                    <button type="button" class="homework__answer-button" onclick="game.init()">войти в игру</button>
+                </div>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 3</h3>
+                    <span class="homework__task-text">*На базе игры, созданной на уроке, реализовать игру «Кто хочет
+                        стать миллионером?»</span>
+                    <button type="button" class="homework__answer-button" onclick="wwbm.run()">Войти в игру "Кто хочет
+                        стать миллионером"</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__wrapper container">
+            <h2 class="visually-hidden">copyright</h2>
+            <p>&copy; 2021 by ivanych73 all rights reserved</p>
+            <p>content provided by geekbrains &reg;</p>
+        </div>
+    </footer>
+    <script src="js/lesson4.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/wwbm.js"></script>
+</body>
+
+</html>
