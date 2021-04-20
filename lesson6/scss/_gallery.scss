@@ -1,0 +1,51 @@
+.gallery {
+    display: flex;
+/*     flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    &__button {
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        padding: 10px;
+        color: $mineshaft;
+        transition-property: color, background-color,;
+        transition-duration: 600ms;
+    }
+
+    &__button:hover {
+        transform: scale(1.05);
+        color: $white;
+        background-color: $porshe;
+        box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+    }
+
+    &__button:active {
+        transform: scale(0.95);
+        box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+    }
+}
+.gallery img {
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+}
+
+.thumbnails {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+}
+.thumbnails img {
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 150ms ease-in-out;
+}
+.thumbnails img:hover {
+    transform: translateY(-5px);
+}

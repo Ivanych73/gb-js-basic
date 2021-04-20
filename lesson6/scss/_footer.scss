@@ -1,0 +1,16 @@
+.footer {
+    min-height: 100px;
+    background-color: $black;
+    display: flex;
+    align-items: center;
+
+    &__wrapper {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        color: $barberry;
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
