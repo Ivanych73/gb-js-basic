@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson5 homework</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">it's a homework for lesson 5 of javascript basic learing course by geekbrains</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="homework">
+                <h2 class="visually-hidden">Содержание домашней работы</h2>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 1</h3>
+                    <span class="homework__task-text">
+                        Создать функцию, генерирующую шахматную доску. При этом можно использовать любые html-теги по
+                        своему желанию. Доска должна быть разлинована соответствующим образом, т.е. чередовать черные и
+                        белые ячейки. Строки должны нумероваться числами от 1 до 8, столбцы – латинскими буквами A, B,
+                        C, D, E, F, G, H.
+                    </span>
+                    <button type="button" class="homework__answer-button"
+                        onclick="drawChessboard('task1-answer')">ответ</button>
+                    <div class="homework__answer" id="task1-answer">
+
+                    </div>
+                </div>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 2</h3>
+                    <span class="homework__task-text">
+                        Заполнить созданную таблицу буквами, отвечающими за шахматную фигуру, например К – король, Ф –
+                        ферзь и т.п., причем все фигуры должны стоять на своих местах и быть соответственно черными и
+                        белыми.
+                    </span>
+                    <button type="button" class="homework__answer-button"
+                        onclick="fillChessboardLetters('task2-answer')">ответ</button>
+                    <div class="homework__answer" id="task2-answer">
+
+                    </div>
+                </div>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 3</h3>
+                    <span class="homework__task-text">
+                        *Заменить буквы, обозначающие фигуры, картинками.
+                    </span>
+                    <button type="button" class="homework__answer-button"
+                        onclick="fillChessboardPics('task3-answer')">ответ</button>
+                    <div class="homework__answer" id="task3-answer">
+
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__wrapper container">
+            <h2 class="visually-hidden">copyright</h2>
+            <p>&copy; 2021 by ivanych73 all rights reserved</p>
+            <p>content provided by geekbrains &reg;</p>
+        </div>
+    </footer>
+    <script src="js/lesson5.js"></script>
+</body>
+
+</html>
