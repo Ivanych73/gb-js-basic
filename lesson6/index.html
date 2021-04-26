@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson6 homework</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">it's a homework for lesson 6 of javascript basic learing course by geekbrains</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="homework">
+                <h2 class="visually-hidden">Содержание домашней работы</h2>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 1, задание 3</h3>
+                    <span class="homework__task-text">
+                        <p>1 Доработать функцию замены картинки в галерее таким образом, чтобы она проверяла наличие
+                            картинки
+                            по указанному в src адресу.</p>
+                        <p>3 *Добавить в галерею функцию перехода к следующему изображению. По сторонам от большой
+                            картинки
+                            должны быть стрелки «вперед» и «назад», по нажатию на которые происходит замена изображения
+                            на
+                            следующее или предыдущее.</p>
+                    </span>
+                    <div class="homework__answer" id="task1-answer">
+                        <div class="gallery">
+                            <button class="gallery__button" type="button" id="gallery-previous">
+                                <i class="fas fa-chevron-left"></i>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <div class="gallery-large-img">
+                                <img id="image-1" src="https://picsum.photos/seed/1/800" alt="Изображение 1"
+                                    data-seed="1">
+                            </div>
+                            <button class="gallery__button" type="button" id="gallery-next">
+                                <i class="fas fa-chevron-right"></i>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="thumbnails">
+                            <img id="image-thumbnail-1" src="https://picsum.photos/seed/1/150?blur" data-seed="1"
+                                alt="Миниатюра изображения 1">
+                            <img id="image-thumbnail-2" src="https://picsum.photos/seed/2/150?blur" data-seed="2"
+                                alt="Миниатюра изображения 2">
+                            <img id="image-thumbnail-3" src="https://picsum.photos/seed/3/150?blur" data-seed="3"
+                                alt="Миниатюра изображения 3">
+                        </div>
+                    </div>
+                </div>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 2</h3>
+                    <span class="homework__task-text">
+                        Реализовать модуль корзины. Создать блок товаров и блок корзины. У каждого товара есть кнопка
+                        «Купить», при нажатии на которую происходит добавление имени и цены товара в блок корзины.
+                        Корзина должна уметь считать общую сумму заказа.
+                    </span>
+                    <div class="homework__answer" id="task2-answer">
+                        <div class="products">
+                            <ul class="products__list">
+                                <li class="products__item product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__img">
+                                            <img src="images/backpack_man.png" alt="backpack man" width="360"
+                                                height="420">
+                                        </div>
+                                        <div class="product-card__add-to-cart">
+                                            <button type="button" class="product-card__button">
+                                                <img src="images/addtocart.svg" alt="cart">
+                                                <span class="product-card__button-text">Add to Cart</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="product-card__content">
+                                        <h3 class="product-card__title">product1</h3>
+                                        <p class="product-card__info">Known for her sculptural takes on traditional
+                                            tailoring,
+                                            Australian arbiter of cool Kym
+                                            Ellery
+                                            teams up with Moda Operandi.</p>
+                                        <p class="product-card__price">51.00</p>
+                                    </a>
+                                </li>
+                                <li class="products__item product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__img">
+                                            <img src="images/lady_on_heels.png" alt="lady on heels" width="360"
+                                                height="420">
+                                        </div>
+                                        <div class="product-card__add-to-cart">
+                                            <button type="button" class="product-card__button">
+                                                <img src="images/addtocart.svg" alt="cart">
+                                                <span class="product-card__button-text">Add to Cart</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="product-card__content">
+                                        <h3 class="product-card__title">product2</h3>
+                                        <p class="product-card__info">Known for her sculptural takes on traditional
+                                            tailoring,
+                                            Australian arbiter of cool Kym
+                                            Ellery
+                                            teams up with Moda Operandi.</p>
+                                        <p class="product-card__price">52.00</p>
+                                    </a>
+                                </li>
+                                <li class="products__item product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__img">
+                                            <img src="images/man_in_shorts.png" alt="man in shorts" width="360"
+                                                height="420">
+                                        </div>
+                                        <div class="product-card__add-to-cart">
+                                            <button type="button" class="product-card__button">
+                                                <img src="images/addtocart.svg" alt="cart">
+                                                <span class="product-card__button-text">Add to Cart</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="product-card__content">
+                                        <h3 class="product-card__title">product3</h3>
+                                        <p class="product-card__info">Known for her sculptural takes on traditional
+                                            tailoring,
+                                            Australian arbiter of cool Kym
+                                            Ellery
+                                            teams up with Moda Operandi.</p>
+                                        <p class="product-card__price">53.00</p>
+                                    </a>
+                                </li>
+                                <li class="products__item product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__img">
+                                            <img src="images/man_in_t-shirt.png" alt="man in t-shirt" width="360"
+                                                height="420">
+                                        </div>
+                                        <div class="product-card__add-to-cart">
+                                            <button type="button" class="product-card__button">
+                                                <img src="images/addtocart.svg" alt="cart">
+                                                <span class="product-card__button-text">Add to Cart</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="product-card__content">
+                                        <h3 class="product-card__title">product4</h3>
+                                        <p class="product-card__info">Known for her sculptural takes on traditional
+                                            tailoring,
+                                            Australian arbiter of cool Kym
+                                            Ellery
+                                            teams up with Moda Operandi.</p>
+                                        <p class="product-card__price">54.00</p>
+                                    </a>
+                                </li>
+                                <li class="products__item product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__img">
+                                            <img src="images/lady_in_blue.png" alt="lady in blue" width="360"
+                                                height="420">
+                                        </div>
+                                        <div class="product-card__add-to-cart">
+                                            <button type="button" class="product-card__button">
+                                                <img src="images/addtocart.svg" alt="cart">
+                                                <span class="product-card__button-text">Add to Cart</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="product-card__content">
+                                        <h3 class="product-card__title">product5</h3>
+                                        <p class="product-card__info">Known for her sculptural takes on traditional
+                                            tailoring,
+                                            Australian arbiter of cool Kym
+                                            Ellery
+                                            teams up with Moda Operandi.</p>
+                                        <p class="product-card__price">55.00</p>
+                                    </a>
+                                </li>
+                                <li class="products__item product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__img">
+                                            <img src="images/lady_in_grey.png" alt="lady in grey" width="360"
+                                                height="420">
+                                        </div>
+                                        <div class="product-card__add-to-cart">
+                                            <button type="button" class="product-card__button">
+                                                <img src="images/addtocart.svg" alt="cart">
+                                                <span class="product-card__button-text">Add to Cart</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="product-card__content">
+                                        <h3 class="product-card__title">product6</h3>
+                                        <p class="product-card__info">Known for her sculptural takes on traditional
+                                            tailoring,
+                                            Australian arbiter of cool Kym
+                                            Ellery
+                                            teams up with Moda Operandi.</p>
+                                        <p class="product-card__price">56.00</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="shopping-cart">
+                            <h3>Корзина</h3>
+                            <div class="shopping-cart__total-price-wrapper">
+                                <button class="homework__answer-button count-total-button">Посчитать полную
+                                    стоимость</button>
+                                <div class="shopping-cart__total-price">Полная стоимость: __</div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__wrapper container">
+            <h2 class="visually-hidden">copyright</h2>
+            <p>&copy; 2021 by ivanych73 all rights reserved</p>
+            <p>content provided by geekbrains &reg;</p>
+        </div>
+    </footer>
+    <script src="js/lesson6.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+
+</html>
