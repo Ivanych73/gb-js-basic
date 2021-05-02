@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson8 homework</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <script src="js/snake.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">it's a homework for lesson 8 of javascript basic learing course by geekbrains</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="homework">
+                <h2 class="visually-hidden">Содержание домашней работы</h2>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 1</h3>
+                    <span class="homework__task-text">Для практикума из занятия 7 продумать, где можно применить
+                        замыкания.</span>
+                    <div class="homework__answer">
+                        Замыкание применил в одном месте, функция move вызывается из функции startMoving и из
+                        setInterval, но все равно обращается к контексту startMoving и видит определенную там
+                        переменную. Больше не увидел, где бы можно было такую реализцию применить. Зато использовал и
+                        bind и функциональные выражения.
+                    </div>
+                    <div class="homework__answer">
+                        <div id="game" class="game">
+                            <div id="score" class="score">
+                                <span id="score-value" class="value">0</span>
+                            </div>
+                            <div id="board" class="board"></div>
+                            <div id="buttons" class="buttons">
+                                <button id="button-start" class="start" type="button">новая игра</button>
+                                <button id="button-pause" class="pause" type="button">Пауза</button>
+                                <button id="button-stop" class="stop" type="button">закончить игру</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="homework__task">
+                    <h3 class="homework__task-title">задание 2</h3>
+                    <span class="homework__task-text">Не выполняя кода, ответить, что выведет браузер и почему:
+                        <span class="homework__task-example">if (!("a" in window)) {</span>
+                        <span class="homework__task-example">var a = 1;</span>
+                        <span class="homework__task-example">}</span>
+                        <span class="homework__task-example">alert(a);</span>
+                        <div class="homework__answer">
+                            Alert выведет 1, так как a определяется через var и ее область видимости не ограничивается
+                            фигурными скобками.
+                        </div>
+                        <span class="homework__task-example">var b = function a(x) {</span>
+                        <span class="homework__task-example">x && a(--x);</span>
+                        <span class="homework__task-example">};</span>
+                        <span class="homework__task-example">alert(a);</span>
+                        <div class="homework__answer">
+                            По информации <a
+                                href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions">вот
+                                отсюда</a> "В случае функции-выражения с именем, это имя может быть использовано только
+                            внутри самой функции. При попытке использовать его снаружи возникнет ошибка" То есть у нас
+                            функциональное выражение с именем, но к этому имени нельзя обратиться и при попытке вывести
+                            ее браузер выведет ошибку в консоли.
+                        </div>
+                        <span class="homework__task-example">function a(x) {</span>
+                        <span class="homework__task-example">return x * 2;</span>
+                        <span class="homework__task-example">}</span>
+                        <span class="homework__task-example">var a;</span>
+                        <span class="homework__task-example">alert(a);</span>
+                        <div class="homework__answer">
+                            Из методички к уроку 8: "В процессе чтения кода браузер в первую очередь производит поиск
+                            объявлений функций. Когда обнаруживает, создается функция и переменной, у которой имя будет
+                            совпадать с именем функции, присваивается ссылка на функцию." Браузер выведет определение
+                            функции и ее код.
+                        </div>
+                        <span class="homework__task-example">function b(x, y, a) {</span>
+                        <span class="homework__task-example">arguments[2] = 10;</span>
+                        <span class="homework__task-example">alert(a);</span>
+                        <span class="homework__task-example">}</span>
+                        <span class="homework__task-example">b(1, 2, 3);</span>
+                        <div class="homework__answer">
+                            Alert выведет 10. Во 2 строке элементу с индексом 2 массива arguments, который является
+                            свойством объекта функции,
+                            а именно ее параметрами, присваивается 10. То есть аргументу a. Alert как раз его и выводит.
+                        </div>
+                        <span class="homework__task-example">function a() {</span>
+                        <span class="homework__task-example">alert(this);</span>
+                        <span class="homework__task-example">}</span>
+                        <span class="homework__task-example">a.call(null);</span>
+                        <div class="homework__answer">
+                            По информации <a
+                                href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call">вот
+                                отсюда</a> о методе call и передаче ему параметра null: "если метод является функцией в
+                            нестрогом режиме, значения null
+                            и undefined
+                            будут заменены глобальным объектом", то есть ответ будет таким - alert выведет ссылку на
+                            объект window.
+                        </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__wrapper container">
+            <h2 class="visually-hidden">copyright</h2>
+            <p>&copy; 2021 by ivanych73 all rights reserved</p>
+            <p>content provided by geekbrains &reg;</p>
+        </div>
+    </footer>
+</body>
+
+</html>
